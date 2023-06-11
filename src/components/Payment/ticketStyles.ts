@@ -31,7 +31,6 @@ export const PriceInfo = styled.div`
   display: flex;
   margin: 24px 0 44px;
 
-
   font-weight: 700;
   color: #34343E;
 `

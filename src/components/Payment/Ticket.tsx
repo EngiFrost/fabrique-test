@@ -1,8 +1,6 @@
+import { PRICE } from '../../store/constants';
 import { Icon } from '../Icon';
-import * as S from './styles'
-
-const price = 820.95 // TODO: move to store
-
+import * as S from './ticketStyles'
 
 export function Ticket() {
   return (
@@ -16,15 +14,16 @@ export function Ticket() {
 
         <S.PriceInfo>
           <S.BigPrice>
-            {`${Math.trunc(price)},`}
+            {`${Math.trunc(PRICE)},`}
             <S.SmallPrice>
-              {`${Math.trunc(price % 1 * 100)} `}
+              {`${Math.trunc(PRICE % 1 * 100)} `}
             </S.SmallPrice>
             ₽
           </S.BigPrice>
         </S.PriceInfo>
 
-        <S.Description>Приложите или прокатайте карту</S.Description>
+        <S.Description>Приложите</S.Description> 
+        <S.Description>или прокатайте карту</S.Description>
       </S.TicketInfo>
     </S.Wrapper>
   )

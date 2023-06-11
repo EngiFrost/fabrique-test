@@ -1,6 +1,7 @@
 import styled from '@emotion/styled'
 import dayjs from 'dayjs'
 import { useEffect, useState } from 'react'
+import { BOX_NUMBER } from '../../store/constants'
 
 const Wrapper = styled.div`
   display: flex;
@@ -12,8 +13,6 @@ const Wrapper = styled.div`
   line-height: 32px;
   color: #A0A0A0;
 `
-
-const boxNumber = 1 // TODO: move to store
 
 export function DateTimeInfo() {
   const [currentDate, setCurrentDate] = useState<Date>(new Date())
@@ -37,7 +36,7 @@ export function DateTimeInfo() {
 
   return (
     <Wrapper>
-      {`${date} ${time} Касса #${boxNumber}`}
+      {`${date} ${time} Касса #${BOX_NUMBER}`}
     </Wrapper>
   )
 }
