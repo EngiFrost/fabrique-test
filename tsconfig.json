@@ -22,5 +22,6 @@
   },
   "include": [
     "src"
-  ]
+  ],
+  "files": ["typings/custom.d.ts"]
 }

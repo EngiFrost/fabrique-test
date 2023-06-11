@@ -15,8 +15,8 @@ export function BtnSection() {
 
   return (
     <Wrapper>
-      <Button onClick={handleBackBtnClick}/>
-      <Button onClick={handleStaffCallBtnClick}/>
+      <Button icon='backArrow' onClick={handleBackBtnClick}/>
+      <Button icon='man' text='Вызов сотрудника' onClick={handleStaffCallBtnClick}/>
     </Wrapper>
   )
 }

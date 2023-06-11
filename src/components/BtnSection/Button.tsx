@@ -1,16 +1,18 @@
 import styled from '@emotion/styled'
+import { Icon, IconName } from '../Icon'
 
 type Props = {
   onClick: () => void
   text?: string
-  icon?: string // TODO: IconType
+  icon?: IconName
 }
 
-const BaseButton = styled.button`
+const BaseButton = styled.button<{hasText?: boolean}>`
   display: flex;
+  align-items: center;
   gap: 10px;
   
-  padding: 16px;
+  padding: ${(p) => p.hasText ? '16px 24px 16px 16px' : '16px' };
   background-color: #FFFFFF;
   border: none;
   box-shadow: 0px 2px 10px rgba(52, 52, 62, 0.24);
@@ -27,11 +29,11 @@ const BaseButton = styled.button`
 `
 
 export function Button(props: Props) {
-  const {text = 'Вызов сотрудника', icon, onClick} = props
+  const {text, icon, onClick} = props
 
-  // TODO: svg icon by link
   return (
-    <BaseButton onClick={onClick}>
+    <BaseButton onClick={onClick} hasText={!!text}>
+      <Icon name={icon}/>
       {text}
     </BaseButton>
   )
