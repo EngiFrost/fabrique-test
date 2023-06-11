@@ -3,7 +3,7 @@ import * as icons from './icons'
 export type IconName = keyof typeof icons
 
 type Props = {
-  name?: IconName
+  name: IconName
 }
 
 export function Icon({name}: Props) {

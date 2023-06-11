@@ -3,8 +3,8 @@ import { Icon, IconName } from '../Icon'
 
 type Props = {
   onClick: () => void
+  icon: IconName
   text?: string
-  icon?: IconName
 }
 
 const BaseButton = styled.button<{hasText?: boolean}>`

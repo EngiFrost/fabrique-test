@@ -1,4 +1,7 @@
 import styled from '@emotion/styled'
+import { DateTimeInfo } from './DateTimeInfo'
+import { Ticket } from './Ticket'
+import { Arrow } from './Arrow'
 
 const Wrapper = styled.div`
   display: flex;
@@ -14,9 +17,9 @@ const Wrapper = styled.div`
 export function Payment() {
   return (
     <Wrapper>
-      {/* TODO: <DateTimeInfo /> */}
-      {/* TODO: <Ticket /> */}
-      {/* TODO: <Arrow /> */}
+      <DateTimeInfo />
+      <Ticket />
+      <Arrow />
     </Wrapper>
   )
 }
