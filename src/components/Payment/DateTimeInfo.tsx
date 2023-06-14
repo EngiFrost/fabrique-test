@@ -6,12 +6,17 @@ import { BOX_NUMBER } from '../../store/constants'
 const Wrapper = styled.div`
   display: flex;
   justify-content: end;
+  gap: 15px;
   margin: 20px 80px 148px;
 
   font-weight: 600;
   font-size: 24px;
   line-height: 32px;
   color: #A0A0A0;
+`
+
+const Text = styled.div`
+  display: inline;
 `
 
 export function DateTimeInfo() {
@@ -36,7 +41,9 @@ export function DateTimeInfo() {
 
   return (
     <Wrapper>
-      {`${date} ${time} Касса #${BOX_NUMBER}`}
+      <Text>{date}</Text>
+      <Text>{time}</Text>
+      <Text>{`Касса #${BOX_NUMBER}`}</Text>
     </Wrapper>
   )
 }

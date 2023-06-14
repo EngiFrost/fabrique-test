@@ -16,7 +16,7 @@ export function Ticket() {
           <S.BigPrice>
             {`${Math.trunc(PRICE)},`}
             <S.SmallPrice>
-              {`${Math.trunc(PRICE % 1 * 100)} `}
+              {`${+(PRICE % 1).toFixed(2) * 100 || '00'} `}
             </S.SmallPrice>
             ₽
           </S.BigPrice>

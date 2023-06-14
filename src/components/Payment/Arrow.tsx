@@ -5,12 +5,13 @@ const Wrapper = styled.div`
   margin: auto 80px 60px auto;
   position: relative;
 
+  animation: arrow-bounce 1s linear infinite;
+
   &:hover {
     cursor: pointer;
-    animation: arrow-hover 1s linear infinite;
   }
 
-  @keyframes arrow-hover {
+  @keyframes arrow-bounce {
     0% {
         top:0;
     }
